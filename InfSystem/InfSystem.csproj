@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D411F2F2-C213-48A8-8FA2-769BE5F919D8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>InfSystem</RootNamespace>
+    <AssemblyName>InfSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuthorizationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuthorizationForm.Designer.cs">
+      <DependentUpon>AuthorizationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContactDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContactDialog.Designer.cs">
+      <DependentUpon>ContactDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerCRUDForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerCRUDForm.Designer.cs">
+      <DependentUpon>CustomerCRUDForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CompareConditionInputDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CompareConditionInputDialog.Designer.cs">
+      <DependentUpon>CompareConditionInputDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeCRUDForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeCRUDForm.Designer.cs">
+      <DependentUpon>EmployeeCRUDForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeDialog.Designer.cs">
+      <DependentUpon>EmployeeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntitySelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntitySelectForm.Designer.cs">
+      <DependentUpon>EntitySelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForeignKeyInputDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForeignKeyInputDialog.Designer.cs">
+      <DependentUpon>ForeignKeyInputDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfSystemMessageBox.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonCRUDForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonCRUDForm.Designer.cs">
+      <DependentUpon>PersonCRUDForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonDialog.Designer.cs">
+      <DependentUpon>PersonDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PriceCRUDForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PriceCRUDForm.Designer.cs">
+      <DependentUpon>PriceCRUDForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PriceDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PriceDialog.Designer.cs">
+      <DependentUpon>PriceDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCRUDForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductCRUDForm.Designer.cs">
+      <DependentUpon>ProductCRUDForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductDialog.Designer.cs">
+      <DependentUpon>ProductDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="PropertiesSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PropertiesSelectForm.Designer.cs">
+      <DependentUpon>PropertiesSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryBuilderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QueryBuilderForm.Designer.cs">
+      <DependentUpon>QueryBuilderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SaleCRUDForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaleCRUDForm.Designer.cs">
+      <DependentUpon>SaleCRUDForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SaleDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaleDialog.Designer.cs">
+      <DependentUpon>SaleDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SaleProductsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaleProductsForm.Designer.cs">
+      <DependentUpon>SaleProductsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SoldProductCRUDForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SoldProductCRUDForm.Designer.cs">
+      <DependentUpon>SoldProductCRUDForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SoldProductDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SoldProductDialog.Designer.cs">
+      <DependentUpon>SoldProductDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubstringInputDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubstringInputDialog.Designer.cs">
+      <DependentUpon>SubstringInputDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SupplierCRUDForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupplierCRUDForm.Designer.cs">
+      <DependentUpon>SupplierCRUDForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users.cs" />
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuthorizationForm.resx">
+      <DependentUpon>AuthorizationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContactDialog.resx">
+      <DependentUpon>ContactDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerCRUDForm.resx">
+      <DependentUpon>CustomerCRUDForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompareConditionInputDialog.resx">
+      <DependentUpon>CompareConditionInputDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeCRUDForm.resx">
+      <DependentUpon>EmployeeCRUDForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeDialog.resx">
+      <DependentUpon>EmployeeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntitySelectForm.resx">
+      <DependentUpon>EntitySelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForeignKeyInputDialog.resx">
+      <DependentUpon>ForeignKeyInputDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonCRUDForm.resx">
+      <DependentUpon>PersonCRUDForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonDialog.resx">
+      <DependentUpon>PersonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PriceCRUDForm.resx">
+      <DependentUpon>PriceCRUDForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PriceDialog.resx">
+      <DependentUpon>PriceDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductCRUDForm.resx">
+      <DependentUpon>ProductCRUDForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductDialog.resx">
+      <DependentUpon>ProductDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PropertiesSelectForm.resx">
+      <DependentUpon>PropertiesSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="QueryBuilderForm.resx">
+      <DependentUpon>QueryBuilderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaleCRUDForm.resx">
+      <DependentUpon>SaleCRUDForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaleDialog.resx">
+      <DependentUpon>SaleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaleProductsForm.resx">
+      <DependentUpon>SaleProductsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SoldProductCRUDForm.resx">
+      <DependentUpon>SoldProductCRUDForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SoldProductDialog.resx">
+      <DependentUpon>SoldProductDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubstringInputDialog.resx">
+      <DependentUpon>SubstringInputDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupplierCRUDForm.resx">
+      <DependentUpon>SupplierCRUDForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\DbConnection.Customer.datasource" />
+    <None Include="Properties\DataSources\DbConnection.Employee.datasource" />
+    <None Include="Properties\DataSources\DbConnection.EntityProperty.datasource" />
+    <None Include="Properties\DataSources\DbConnection.Person.datasource" />
+    <None Include="Properties\DataSources\DbConnection.Position.datasource" />
+    <None Include="Properties\DataSources\DbConnection.Product.datasource" />
+    <None Include="Properties\DataSources\DbConnection.ProductCategory.datasource" />
+    <None Include="Properties\DataSources\DbConnection.ProductClass.datasource" />
+    <None Include="Properties\DataSources\DbConnection.ProductGroup.datasource" />
+    <None Include="Properties\DataSources\DbConnection.ProductKind.datasource" />
+    <None Include="Properties\DataSources\DbConnection.ProductPrice.datasource" />
+    <None Include="Properties\DataSources\DbConnection.ProductSubclass.datasource" />
+    <None Include="Properties\DataSources\DbConnection.ProductSubgroup.datasource" />
+    <None Include="Properties\DataSources\DbConnection.Sale.datasource" />
+    <None Include="Properties\DataSources\DbConnection.SoldProduct.datasource" />
+    <None Include="Properties\DataSources\DbConnection.Supplier.datasource" />
+    <None Include="Properties\DataSources\DbConnection.Unit.datasource" />
+    <None Include="Properties\DataSources\QueryBuilder.Operator.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassificatorsLoader\ClassificatorsLoader.csproj">
+      <Project>{9e371bf1-9970-44ee-96a1-a4a3e85ddd4d}</Project>
+      <Name>ClassificatorsLoader</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DbConnection\DbConnection.csproj">
+      <Project>{c33d70ec-5a4f-4dc3-8583-78ecaefb4e33}</Project>
+      <Name>DbConnection</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QueryBuilder\QueryBuilder.csproj">
+      <Project>{95E883CF-3AEF-4804-8475-9AB7331F9192}</Project>
+      <Name>QueryBuilder</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ReportBuilder\ReportBuilder.csproj">
+      <Project>{2cb3c133-7e8e-4358-8dca-99e17654651d}</Project>
+      <Name>ReportBuilder</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddClause_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteListItem_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UpdateListItem_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FindSymbol_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExcelWorksheetView_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Checkmark_16x.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
